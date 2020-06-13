@@ -13,6 +13,12 @@ CREATE TABLE Models (
 		REFERENCES Manufacturers([ManufacturerID])
 )
 
+INSERT INTO Manufacturers ([Name], [EstablishedOn])
+VALUES
+	('BMW', '07/03/1916'),
+	('Tesla', '01/01/2003'),
+	('Lada', '01/05/1966')
+
 INSERT INTO Models ([ModelID], [Name], [ManufacturerID])
 VALUES
 	(101, 'X1', 1),
@@ -21,9 +27,3 @@ VALUES
 	(104, 'Model X', 2),
 	(105, 'Model 3', 2),
 	(106, 'Nova', 3)
-
-INSERT INTO Manufacturers ([Name], [EstablishedOn])
-VALUES
-	('BMW', 07/03/1916),
-	('Tesla', 01/01/2003),
-	('Lada', 01/05/1966)
